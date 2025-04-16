@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment folders
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Python virtualenvs
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Mac and system files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+.cache
+.pytest_cache/
+
+# MyPy and Pyre type checker
+.mypy_cache/
+.pyre/
+
+# Test and build artifacts
+build/
+dist/
+*.egg
+*.manifest
+*.spec
+
+# Jupyter notebook metadata
+*.nbconvert.ipynb
+
+# Secret files
+*.env
+secrets.env
+*.pem
+*.key
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+~$*
+
+# GitHub-specific
+.gitattributes
+
+# Custom
+sample*.csv
+isort.py
+data
+
