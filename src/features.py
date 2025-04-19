@@ -121,7 +121,6 @@ CITY_COORDINATES = {
     "Des Moines": (41.5868, -93.6250),
 }
 
-
 def haversine_distance(lat1, lon1, lat2, lon2):
     """
     Computes the great-circle distance between two points (lat1, lon1) and (lat2, lon2)
