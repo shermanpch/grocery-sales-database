@@ -37,7 +37,7 @@ REFERENCE_LAT = 40.7128
 REFERENCE_LON = -74.0060
 
 # Coordinates for each city (latitude, longitude)
-CITY_COORDINATES = {
+city_coordinates = {
     "New York": (40.7128, -74.0060),
     "Los Angeles": (34.0522, -118.2437),
     "Chicago": (41.8781, -87.6298),
@@ -119,7 +119,23 @@ CITY_COORDINATES = {
     "Santa Ana": (33.7455, -117.8677),
     "Stockton": (37.9577, -121.2908),
     "Des Moines": (41.5868, -93.6250),
+    "Anaheim": (33.8353, -117.9145),
+    "Birmingham": (33.5437, -86.7796),
+    "Montgomery": (32.3617, -86.2792),
+    "Grand Rapids": (42.9638, -85.6700),
+    "Spokane": (47.6597, -117.4291),
+    "Baton Rouge": (30.4712, -91.1474),
+    "Jackson": (32.2989, -90.1847),
+    "Akron": (41.0818, -81.5115),
+    "Tacoma": (47.2458, -122.4594),
+    "Virginia Beach": (36.8631, -76.0158),
+    "Corpus Christi": (27.8006, -97.3964),
+    "Long Beach": (33.7701, -118.1937),
+    "Riverside": (33.9534, -117.3962),
+    "Omaha": (41.2572, -95.9951),
+    "St. Petersburg": (27.7731, -82.6400)
 }
+
 
 def haversine_distance(lat1, lon1, lat2, lon2):
     """
@@ -142,10 +158,10 @@ def get_distance_from_nyc(row) -> float:
     Uses the Haversine formula. Returns NaN if the city is not in the coordinate list.
     """
     city = getattr(row, "CustomerCityName", None)
-    if city not in CITY_COORDINATES:
+    if city not in city_coordinates:
         return np.nan
 
-    lat2, lon2 = CITY_COORDINATES[city]
+    lat2, lon2 = city_coordinates[city]
     return haversine_distance(REFERENCE_LAT, REFERENCE_LON, lat2, lon2)
 
 
